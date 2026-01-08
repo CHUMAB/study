@@ -10,7 +10,7 @@ export async function POST(req) {
 
 
 
-  const { task, fetch, classNum, taskCompletePost } = await req.json();
+  const { task, due, fetch, classNum, taskCompletePost } = await req.json();
 
   if (taskCompletePost) {
 
@@ -49,6 +49,7 @@ export async function POST(req) {
           text: task, 
           when: showTime, 
           class: classNum,
+          due: due,
           completed: false});
 
     await my_test.collection.insertOne(taskToSend[0]);
@@ -69,6 +70,7 @@ export async function POST(req) {
       for (let i = 0; i < convoData.length; i++ ) {
             startupData.push(convoData[i]);
           }
+          console.log(convoData);
     }
  
 

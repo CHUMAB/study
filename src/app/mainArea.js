@@ -6,12 +6,14 @@ import styled from 'styled-components';
 import Schedule from './schedule';
 import Runescape from './runescape';
 import Dashboard from './dashboard';
+import Syllabus from './syllabus';
 
 const MainArea = () => {
 
     const [schedule, setSchedule] = React.useState(false);
     const [runescape, setRunescape] = React.useState(false);
     const [dashboard, setDashboard] = React.useState(true);
+    const [syllabus, setSyllabus] = React.useState(false);
 
 
 
@@ -19,32 +21,42 @@ const MainArea = () => {
         setSchedule(true);
         setRunescape(false);
         setDashboard(false);
+        setSyllabus(false);
     }
 
     const handleRunescape = (event) => {
         setRunescape(true);
         setSchedule(false);
         setDashboard(false);
+        setSyllabus(false);
     }
     const handleDashboard = (event) => {
         setRunescape(false);
         setSchedule(false);
         setDashboard(true);
+        setSyllabus(false);
+
     }
 
+    const handleSyllabus = (event) => {
+        setRunescape(false);
+        setSchedule(false);
+        setDashboard(false);
+        setSyllabus(true);
+    }
 
     return (
         <>
         
-        <AreaHolder>
+        <AreaHolder id="areaholder">
         <MenuDiv>
-            <Button className="rounded-t-lg" onClick={handleDashboard}>DASHBOARD
+            <Button className="rounded-t-lg" onClick={handleDashboard} >DASHBOARD
 
             </Button>
             <Button className="rounded-t-lg" onClick={handleSchedule}>SCHEDULE
 
             </Button>
-            <Button className="rounded-t-lg" onClick={handleRunescape}>RUNESCAPE
+            <Button className="rounded-t-lg" onClick={handleSyllabus}>SYLLABUS
 
             </Button>
             
@@ -56,6 +68,7 @@ const MainArea = () => {
             {dashboard ?<HolderDiv><Dashboard /></HolderDiv> : <div></div>}
             {schedule ? <HolderDiv><Schedule /></HolderDiv> : <div></div>}
             {runescape ? <HolderDiv><Runescape /></HolderDiv> : <div></div>}
+            {syllabus ? <HolderDiv><Syllabus /></HolderDiv> : <div></div>}
         </div>
         </AreaHolder>
         </>
@@ -65,13 +78,12 @@ const MainArea = () => {
 const AreaHolder = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: 95vh;
-    border: 3px solid green;
-    width: 70vw;
+    width: 60vw;
     float: left;
-
+    margin-top: 8vh;
+    margin-left: 5vw;
 `;
 
 
@@ -81,25 +93,35 @@ const MenuDiv = styled.div`
     float: left;
     display: flex;
     flex-direction: row;
-
 `;
 
 const Button = styled.div`
     border-top:
     height: 4.4vh;
-    border: 3px solid blue;
+    border: 1px solid gray;
     width: 15vw;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-    
+    background-color: DarkSlateGrey;
+    &:hover {
+        background-color: rgb(26, 26, 26);
+        border-bottom: 1px solid rgb(26, 26, 26);
+        cursor: pointer;
+    }
+    &:active:not(:disabled) {
+        background-color: rgb(26, 26, 26);
+       border-bottom: 1px solid rgb(26, 26, 26);
+    }
 `;
 
 const HolderDiv = styled.div`
     height: 70vh;
     width: 60vw;
-    border: 2px solid red;
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
+    border-bottom: 2px solid gray;
 `;
 
 export default MainArea;
