@@ -98,7 +98,7 @@ const MenuDiv = styled.div`
 const Button = styled.div`
     border-top:
     height: 4.4vh;
-    border: 1px solid gray;
+    border: 2px solid gray;
     width: 15vw;
     justify-content: center;
     align-items: center;
