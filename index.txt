@@ -1,5 +1,5 @@
 1:HL["/chumab.github.io/_next/static/css/4de9c4653a55f3ea.css","style",{"crossOrigin":""}]
-0:["DM9q_2ATZFB9ghEJXjFhY",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/chumab.github.io/_next/static/css/4de9c4653a55f3ea.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
+0:["OsgnKt_sGqLP6qRKtyAFD",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/chumab.github.io/_next/static/css/4de9c4653a55f3ea.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
 4:I[6954,[],""]
 5:I[7264,[],""]
 7:I[1072,["31","static/chunks/31-a565e27761998426.js","931","static/chunks/app/page-cad4fba666edba27.js"],""]
