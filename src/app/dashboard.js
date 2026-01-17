@@ -40,44 +40,35 @@ const Dashboard = () => {
 
     const d2l = "https://online.camosun.ca/d2l/home";
 
-    const dashBoardItems = [ weekNumber, currentDate ];
+    const dashBoardItems = [ {"id": 0, "content": weekNumber},
+                             {"id": 1, "content": currentDate} ];
 
     React.useEffect(() => {
         var links = []
-    
+
         links.push(
-                            {"link": "https://online.camosun.ca/d2l/home", "site": "D2L"},
-                            {"link": "https://colss-prod.ec.camosun.ca/Student/?hideProxyDialog=false", "site": "MyCamosun"},
-                            {"link": "https://github.com/CHUMAB", "site": "GitHub"}
-                            
-                        );
+                    {"key": 2, "link": "https://online.camosun.ca/d2l/home", "site": "D2L"},
+                    {"key": 3, "link": "https://colss-prod.ec.camosun.ca/Student/?hideProxyDialog=false", "site": "MyCamosun"},
+                    {"key": 4, "link": "https://github.com/CHUMAB", "site": "GitHub"} 
+                );
 
         setLinkArray(links);
-
-        
     }, []);
 
-    React.useEffect(() => {
-        
-    
-        
-
-        console.log(linkArray);
-
-        
-    }, [linkArray]);
+    // React.useEffect(() => {
+    // }, [linkArray]);
     
 
 
     return(
-        <DashboardDiv>
-            <Module>
+        <DashboardDiv  key={(Math.random()*(1, 10000))}>
+            <Module  key={(Math.random()*(1, 10000))}>
                 {dashBoardItems.map((item) => {
-                  return <div key={(Math.random()*(1, 1000))} id='12'>{arrow} {item}</div> 
+                  return <div key={item.id} >{arrow} {item.content}</div> 
                 })}
-                {linkArray.map((item) => 
-                     <><Link target="_blank" key={(Math.random()*(1, 1000))} href={item.link}>{arrow} ${item.site}</Link><br></br></>
-                )}
+                {linkArray.map((item) => {
+                     return <Link target="_blank" key={item.key} href={item.link}>{arrow} ${item.site}</Link>
+                })}
             </Module>
             <Module>
                 
@@ -93,8 +84,10 @@ const DashboardDiv = styled.div`
 
 const Module = styled.div`
     height: 15vh;
-    width: 15vw;
+    width: 50vw;
     color: lime;
+    display: flex;
+    flex-direction: column;
 `;
 
 const Link = styled.a`

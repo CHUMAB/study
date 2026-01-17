@@ -6,6 +6,8 @@ import styled from 'styled-components';
 import Runescape from './runescape';
 import DatePicker from 'react-date-picker'
 
+export const dynamic = 'force-dynamic';
+
 const TaskList = () => {
 
     const [message, setMessage] = React.useState("");

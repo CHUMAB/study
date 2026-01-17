@@ -6,8 +6,8 @@ const nextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  assetPrefix: isProd ? '/chumab.github.io/' : '',
-  basePath: isProd ? '/chumab.github.io' : '',
+  assetPrefix: isProd ? '/study/' : '',
+  basePath: isProd ? '/study' : '',
   output: 'export'
 };
 

@@ -5,6 +5,7 @@ import db_connect from "../../../database/db-connection";
 const db = db_connect();
 const taskToSend = [];
 
+export const dynamic = 'force-dynamic';
 
 export async function POST(req) {
 
@@ -58,6 +59,7 @@ export async function POST(req) {
   }
 
   if (fetch) {
+    console.log(fetch);
 
     let convoData = [];
     const startupData = [];
