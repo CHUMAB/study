@@ -58,6 +58,7 @@ export async function POST(req) {
   }
 
   if (fetch) {
+    console.log(fetch);
 
     let convoData = [];
     const startupData = [];
@@ -88,3 +89,4 @@ export async function POST(req) {
 
 
   
+export const dynamic = "force-static";

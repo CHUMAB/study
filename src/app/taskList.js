@@ -6,6 +6,8 @@ import styled from 'styled-components';
 import Runescape from './runescape';
 import DatePicker from 'react-date-picker'
 
+export const dynamic = 'force-dynamic';
+
 const TaskList = () => {
 
     const [message, setMessage] = React.useState("");
@@ -140,7 +142,7 @@ const TaskList = () => {
                     {fetchedTask.map((tasks) =>{
                     if (tasks.completed === false) {
                         if (tasks.class === "COMP-246") {
-                            return      <div className="w-full mb-2 bg-blue-800 border-t-2 border-2">
+                            return      <div key={(Math.random()*(1, 1000))} className="w-full mb-2 bg-blue-800 border-t-2 border-2">
                                             <div className="bg-slate-700 float-left px-2 border-r-2 border-b-2">Due: {tasks.due}</div>
                                             <div className="bg-slate-700 float-right px-2 border-l-2 border-b-2">{tasks.class}</div>
                                             <br></br>
@@ -153,7 +155,7 @@ const TaskList = () => {
                                                 </div>
                             }
                         if (tasks.class === "COMP-253") {
-                            return      <div className="w-full mb-2 bg-sky-700 border-t-2 border-2">
+                            return      <div key={(Math.random()*(1, 1000))} className="w-full mb-2 bg-sky-700 border-t-2 border-2">
                                             <div className="bg-slate-700 float-left px-2 border-r-2 border-b-2">Due: {tasks.due}</div>
                                             <div className="bg-slate-700 float-right px-2 border-l-2 border-b-2">{tasks.class}</div>
                                             <br></br>
@@ -165,7 +167,7 @@ const TaskList = () => {
                                         </div>
                             }
                         if (tasks.class === "COMP-271") {
-                            return      <div className="w-full mb-2 bg-indigo-700 border-t-2 border-2">
+                            return      <div key={(Math.random()*(1, 1000))} className="w-full mb-2 bg-indigo-700 border-t-2 border-2">
                                             <div className="bg-slate-700 float-left px-2 border-r-2 border-b-2">Due: {tasks.due}</div>
                                             <div className="bg-slate-700 float-right px-2 border-l-2 border-b-2">{tasks.class}</div>
                                             <br></br>
@@ -177,7 +179,7 @@ const TaskList = () => {
                                         </div>
                             }
                         if (tasks.class === "ENGR-255") {
-                            return      <div className="w-full mb-2 bg-purple-950 border-t-2 border-2">
+                            return      <div key={(Math.random()*(1, 1000))} className="w-full mb-2 bg-purple-950 border-t-2 border-2">
                                             <div className="bg-slate-700 float-left px-2 border-r-2 border-b-2">Due: {tasks.due}</div>
                                             <div className="bg-slate-700 float-right px-2 border-l-2 border-b-2">{tasks.class}</div>
                                             <br></br>
@@ -189,7 +191,7 @@ const TaskList = () => {
                                         </div>
                             }
                         if (tasks.class === "HLSC-264") {
-                            return      <div className="w-full mb-2 bg-gray-700 border-t-2 border-2">
+                            return      <div key={(Math.random()*(1, 1000))} className="w-full mb-2 bg-gray-700 border-t-2 border-2">
                                             <div className="bg-slate-700 float-left px-2 border-r-2 border-b-2">Due: {tasks.due}</div>
                                             <div className="bg-slate-700 float-right px-2 border-l-2 border-b-2">{tasks.class}</div>
                                             <br></br>
@@ -201,7 +203,7 @@ const TaskList = () => {
                                         </div>
                             }
                         if (tasks.class === "ICS-224") {
-                            return      <div className="w-full mb-2 bg-rose-900 border-t-2 border-2">
+                            return      <div key={(Math.random()*(1, 1000))} className="w-full mb-2 bg-rose-900 border-t-2 border-2">
                                             <div className="bg-slate-700 float-left px-2 border-r-2 border-b-2">Due: {tasks.due}</div>
                                             <div className="bg-slate-700 float-right px-2 border-l-2 border-b-2">{tasks.class}</div>
                                             <br></br>
@@ -213,7 +215,7 @@ const TaskList = () => {
                                         </div>
                             }
                         if (tasks.class === "ICS-280") {
-                            return      <div className="w-full mb-2 bg-blue-400 border-t-2 border-2">
+                            return      <div key={(Math.random()*(1, 1000))} className="w-full mb-2 bg-blue-400 border-t-2 border-2">
                                             <div className="bg-slate-700 float-left px-2 border-r-2 border-b-2">Due: {tasks.due}</div>
                                             <div className="bg-slate-700 float-right px-2 border-l-2 border-b-2">{tasks.class}</div>
                                             <br></br>

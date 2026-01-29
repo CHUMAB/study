@@ -26,7 +26,7 @@ const Runescape = () => {
                 <InnerTables className="mt-10">
                 {runescapeData.map((skills) =>{
                 if (skills.key  === 'row1') {
-                            return <table className='ml-60'>
+                            return <table key={(Math.random()*(1, 1000))} className='ml-60'>
                                 <tbody>  
                                     <tr>
                                         <td className='text-white ml-8'>{skills.skill}</td>
@@ -40,7 +40,7 @@ const Runescape = () => {
             <InnerTables className="mt-10">
                 {runescapeData.map((skills) =>{
                 if (skills.key === 'row2') {
-                    return <table className='mx-50'>
+                    return <table key={(Math.random()*(1, 1000))} className='mx-50'>
                                 <tbody>  
                                     <tr>
                                         <td className='text-white'>{skills.skill}</td>
@@ -54,7 +54,7 @@ const Runescape = () => {
             <InnerTables className="mt-10">
                 {runescapeData.map((skills) =>{
                 if (skills.key === 'row3') {
-                    return <table className='mr-60'>
+                    return <table key={(Math.random()*(1, 1000))} className='mr-60'>
                                 <tbody>  
                                     <tr>
                                         <td className='text-white'>{skills.skill}</td>
