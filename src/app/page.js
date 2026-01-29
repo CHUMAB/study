@@ -9,7 +9,7 @@ export default function Home() {
     <div>
     <h1>GAMER!~</h1>
     <MainArea />
-    {/* <Runescape /> */}
+    { <Runescape /> }
     <TaskList />
     </div>
   )
